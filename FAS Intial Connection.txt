@@ -1,0 +1,31 @@
+import pandas as pd
+import requests, json
+
+API_Key = 'f432cf12-d1a9-44aa-b152-c3d9384954b3'
+url = f'https://apps.fas.usda.gov/OpenData/api/esr/exports/commodityCode/1702/allCountries/marketYear/2022'
+
+r = requests.get(url,headers={"API_KEY":API_Key})
+data = r.json()
+df = pd.DataFrame(data)
+df
+
+
+
+
+
+
+
+
+### ESR Urls 
+# 'https://apps.fas.usda.gov/OpenData/api/esr/regions'
+# 'https://apps.fas.usda.gov/OpenData/api/esr/countries'
+# 'https://apps.fas.usda.gov/OpenData/api/esr/commodities'
+# 'https://apps.fas.usda.gov/OpenData/api/esr/unitsOfMeasure'
+# 'https://apps.fas.usda.gov/OpenData/api/esr/datareleasedates'
+# 'https://apps.fas.usda.gov/OpenData/api/esr/exports/commodityCode/1702/allCountries/marketYear/2022'
+# 'https://apps.fas.usda.gov/OpenData/api/esr/exports/commodityCode/1900/countryCode/590/marketYear/2022'
+
+##GATS
+
+
+##PSD
